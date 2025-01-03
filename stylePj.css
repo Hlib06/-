@@ -1,0 +1,176 @@
+/* Загальний стиль */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Хедер */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+    header .logo {
+        height: 50px;
+        width: auto;
+    }
+
+    header .desktop-menu {
+        display: flex;
+        gap: 15px;
+    }
+
+        header .desktop-menu a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+    header .login-button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 8px;
+        background-color: white;
+        color: #007bff;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+        header .login-button:hover {
+            background-color: #0056b3;
+            color: white;
+        }
+
+    /* Мобільне меню */
+    header .mobile-menu-icon {
+        display: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: white;
+    }
+
+    header .mobile-menu {
+        display: none;
+        flex-direction: column;
+        background-color: #007bff;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 5px;
+        padding: 10px;
+    }
+
+        header .mobile-menu.show {
+            display: flex;
+        }
+
+        header .mobile-menu a {
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+
+/* Основний контент */
+main {
+    padding: 20px;
+}
+
+.container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Картка продукту */
+.product-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    background-color: #fff;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+    .product-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .product-card .badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #ff5733;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .product-card img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    .product-card h2 {
+        margin: 10px 0;
+        font-size: 24px;
+        font-weight: bold;
+        color: #333;
+    }
+
+    .product-card p {
+        margin: 10px 0;
+        font-size: 16px;
+        color: #555;
+    }
+
+    .product-card .price {
+        font-size: 20px;
+        font-weight: bold;
+        color: #000;
+        margin-bottom: 20px;
+    }
+
+    .product-card button {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+        text-transform: uppercase;
+    }
+
+        .product-card button:hover {
+            background-color: #0056b3;
+        }
+
+/* Медіа-запити */
+@media (max-width: 768px) {
+    header .desktop-menu {
+        display: none;
+    }
+
+    header .mobile-menu-icon {
+        display: block;
+    }
+}

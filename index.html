@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Сайт подорожей</title>
+    <link rel="stylesheet" href="stylePj.css">
+</head>
+<body>
+    <!-- Хедер сайту -->
+    <header>
+        <img src="логотип.png" alt="Логотип" class="logo">
+        <nav class="desktop-menu">
+            <a href="#home">Головна</a>
+            <a href="#about">Про нас</a>
+            <a href="#contacts">Контакти</a>
+            <a href="#faq">Запитання</a>
+        </nav>
+        <button class="login-button">Логін</button>
+        <div class="mobile-menu-icon">
+            ☰
+        </div>
+        <div class="mobile-menu">
+            <a href="#home">Головна</a>
+            <a href="#about">Про нас</a>
+            <a href="#contacts">Контакти</a>
+            <a href="#faq">Запитання</a>
+        </div>
+    </header>
+
+    <!-- Основний контент -->
+    <main>
+        <div class="container">
+            <article class="product-card">
+                <div class="badge">Топ</div>
+                <img src="картинка1.jpg" alt="Гори">
+                <h2>Відпочинок в горах</h2>
+                <p>Незабутній відпочинок в горах для всієї сім'ї. Мальовничі краєвиди та могутні ріки</p>
+                <p class="price">15000 грн</p>
+                <button>Замовити</button>
+            </article>
+
+            <article class="product-card">
+                <img src="картинка2.jpg" alt="Море">
+                <h2>Відпочинок на морі</h2>
+                <p>Пляжі з білим піском і кришталево чиста вода. Найкращий вибір для літа!</p>
+                <p class="price">20000 грн</p>
+                <button>Замовити</button>
+            </article>
+
+            <article class="product-card">
+                <img src="картинка3.jpg" alt="Ліс">
+                <h2>Відпочинок у лісі</h2>
+                <p>Свіже повітря, тиша і спокій. Ідеальний відпочинок для любителів природи.</p>
+                <p class="price">12000 грн</p>
+                <button>Замовити</button>
+            </article>
+
+            <article class="product-card">
+                <img src="картинка4.jpg" alt="Сафарі">
+                <h2>Сафарі-тур</h2>
+                <p>Пригоди в диких місцях з професійними гідами. Емоції на все життя!</p>
+                <p class="price">30000 грн</p>
+                <button>Замовити</button>
+            </article>
+        </div>
+    </main>
+    <script>
+        const mobileMenuIcon = document.querySelector('.mobile-menu-icon');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        mobileMenuIcon.addEventListener('click', () => {
+            mobileMenu.classList.toggle('show');
+        });
+    </script>
+</body>
+</html>
